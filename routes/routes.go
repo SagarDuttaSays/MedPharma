@@ -2,7 +2,7 @@ package routes
 
 import (
 	"github.com/SagarDuttaSays/MedPharma/controllers"
-	"github.com/SagarDuttaSays/MedPharma/gin"
+	"github.com/gin-gonic/gin"
 )
 
 func UserRoutes(incomingRoutes *gin.Engine) {
