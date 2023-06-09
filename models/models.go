@@ -24,19 +24,19 @@ type User struct {
 }
 
 type Product struct {
-	Product_ID   primitive.ObjectID
-	Product_Name *string
-	Price        *uint64
-	Rating       *uint8
-	Image        *string
+	Product_ID   primitive.ObjectID `bson:"_id"`
+	Product_Name *string            `json:"product_name"`
+	Price        *uint64            `json:"price"`
+	Rating       *uint8             `json:"rating"`
+	Image        *string            `json:"image"`
 }
 
 type ProductUser struct {
-	Product_ID   primitive.ObjectID
-	Product_Name *string
-	Price        int
-	Rating       *uint
-	Image        *string
+	Product_ID   primitive.ObjectID `bson:"_id"`
+	Product_Name *string            `json:"product_name"`
+	Price        *uint64            `json:"price"`
+	Rating       *uint8             `json:"rating"`
+	Image        *string            `json:"image"`
 }
 
 type Address struct {
