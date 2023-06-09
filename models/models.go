@@ -17,10 +17,10 @@ type User struct {
 	Refresh_Token   *string            `json:"refresh_token"`
 	Created_At      time.Time          `json:"created_at"`
 	Updated_At      time.Time          `json:"updated_at"`
-	User_ID         string
-	UserCart        []ProductUser
-	Address_Details []Address
-	Order_Status    []Order
+	User_ID         string             `json:"user_id"`
+	UserCart        []ProductUser      `json:"usercart" bson:"usercart"`
+	Address_Details []Address          `json:"address" bson:"address"`
+	Order_Status    []Order            `json:"orders" bson:"orders"`
 }
 
 type Product struct {
