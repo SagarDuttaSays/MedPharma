@@ -8,15 +8,15 @@ import (
 
 type User struct {
 	ID              primitive.ObjectID `json:"_id" bson:"_id"`
-	First_Name      *string
-	Last_Name       *string
-	Password        *string
-	Email           *string
-	Phone           *string
-	Token           *string
-	Refresh_Token   *string
-	Created_At      time.Time
-	Updated_At      time.Time
+	First_Name      *string            `json:"first_name"`
+	Last_Name       *string            `json:"last_name"`
+	Password        *string            `json:"password"`
+	Email           *string            `json:"email"`
+	Phone           *string            `json:"phone"`
+	Token           *string            `json:"token"`
+	Refresh_Token   *string            `json:"refresh_token"`
+	Created_At      time.Time          `json:"created_at"`
+	Updated_At      time.Time          `json:"updated_at"`
 	User_ID         string
 	UserCart        []ProductUser
 	Address_Details []Address
