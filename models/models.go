@@ -33,27 +33,27 @@ type Product struct {
 
 type ProductUser struct {
 	Product_ID   primitive.ObjectID `bson:"_id"`
-	Product_Name *string            `json:"product_name"`
-	Price        *uint64            `json:"price"`
-	Rating       *uint8             `json:"rating"`
-	Image        *string            `json:"image"`
+	Product_Name *string            `json:"product_name" bson:"product_name"`
+	Price        *uint64            `json:"price" bson:"price"`
+	Rating       *uint8             `json:"rating" bson:"rating"`
+	Image        *string            `json:"image" bson:"image"`
 }
 
 type Address struct {
-	Address_ID primitive.ObjectID
-	House      *string
-	Street     *string
-	City       *string
-	Pincode    *string
+	Address_ID primitive.ObjectID `bson:"_id"`
+	House      *string            `json:"house" bson:"house"`
+	Street     *string            `json:"street" bson:"street"`
+	City       *string            `json:"city" bson:"city"`
+	Pincode    *string            `json:"pincode" bson:"pincode"`
 }
 
 type Order struct {
-	Order_ID       primitive.ObjectID
-	Order_Cart     []ProductUser
-	Ordered_At     time.Time
-	Price          int
-	Discount       *int
-	Payment_Method Payment
+	Order_ID       primitive.ObjectID `bson:"_id"`
+	Order_Cart     []ProductUser      `json:"order_cart" bson:"order_cart"`
+	Ordered_At     time.Time          `json:"order_at"`
+	Price          int                `json:"price"`
+	Discount       *int               `json:"discount"`
+	Payment_Method Payment            `json:"payment_method"`
 }
 
 type Payment struct {
