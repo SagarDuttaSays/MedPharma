@@ -42,6 +42,10 @@ func (app *Application) AddToCart() gin.HandlerFunc {
 		defer cancel()
 
 		database.AddProductToCart(ctx, app.prodCollection, app.userCollection, productID, userQueryID)
+		if err != nil {
+			c.IndentedJSON(http.StatusInternalServerError, err)
+		}
+		c.IndentedJSON(200, "Successfully added to cart")
 	}
 }
 
